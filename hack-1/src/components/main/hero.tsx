@@ -5,7 +5,7 @@ import { CgShoppingCart } from 'react-icons/cg'
 export default function Hero() {
     return (
         <div className='flex w-screen bg-gray-50 text-gray-800'>
-            <div className='flex w-1/2 flex-col'>
+            <div className='flex w-full xl:w-1/2 flex-col'>
                 <div className=' mx-4 xl:mx-14 mt-14'>
                     <div className='flex mx-16 bg-blue-200 text-blue-600 w-[120px] h-[40px] rounded-lg justify-center items-center font-bold'>
                         Sale 70%
