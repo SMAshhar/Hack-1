@@ -13,11 +13,11 @@ export default function Header() {
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
     return (
-        <div className="flex w-screen bg-white justify-center ">
+        <div className="flex w-screen bg-white justify-center">
             <div className="flex w-full mx-4 lg:mx-12 px-4 py-12 lg:p-8 items-center justify-around">
-                <div className="bg-white mx-8">
+                <Link href={'/'} className="bg-white mx-8">
                     <Image src={'/Logo.webp'} alt="logo" height={50} width={150} />
-                </div>
+                </Link>
                 <div className='flex-grow mx-4 flex lg:hidden items-center justify-end'>
                     <button
                         className="flex lg:hidden rounded-md p-2 text-gray-800 focus:outline-none duration-300 ease-in"
