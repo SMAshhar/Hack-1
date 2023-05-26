@@ -4,11 +4,11 @@ import React from 'react'
 export default function Grid() {
     return (
         <div className='w-screen bg-white text-gray-800 p-16'>
-            <div className='flex text-5xl font-bold w-full px-36'>
+            <div className='flex text-5xl font-bold w-full xl:px-36'>
                 <div className='hidden xl:flex w-1/2'></div>
                 <div className='w-full xl:w-1/2 xl:px-8 tracking-wider'>Unique and Authentic Vintage Designer Jewellery</div>
             </div>
-            <div className='flex flex-col xl:flex-row w-full pt-10 p-24'>
+            <div className='flex flex-col xl:flex-row w-full pt-10 xl:pt-0 xl:px-24'>
                 <div className='w-full xl:w-1/2 relative'>
                     <div className="text-stone-100 text-9xl font-bold bg-clip-text">
                         <h1>Different from Others</h1>
@@ -34,7 +34,7 @@ export default function Grid() {
                         {/* Add more grid items here */}
                     </div>
                 </div>
-                <div className='flex justify-center items-center w-full xl:w-1/2 gap-6'>
+                <div className='flex justify-center items-center w-full xl:w-1/2 gap-6 pt-8'>
                     <div className=''>
                         <Image src={'/feature.webp'} alt='feature' width={650} height={650} />
                     </div>

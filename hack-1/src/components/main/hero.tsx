@@ -5,8 +5,8 @@ import { CgShoppingCart } from 'react-icons/cg'
 export default function Hero() {
     return (
         <div className='flex w-screen bg-gray-50 text-gray-800'>
-            <div className='flex w-full xl:w-1/2 flex-col'>
-                <div className=' mx-4 xl:mx-14 mt-14'>
+            <div className='flex w-full lg:w-1/2 flex-col'>
+                <div className=' mx-4 lg:mx-14 mt-14'>
                     <div className='flex mx-16 bg-blue-200 text-blue-600 w-[120px] h-[40px] rounded-lg justify-center items-center font-bold'>
                         Sale 70%
                     </div>
@@ -30,7 +30,7 @@ export default function Hero() {
                     </div>
                 </div>
             </div>
-            <div className='hidden xl:flex w-1/2 h-[700px] items-center'>
+            <div className='hidden lg:flex w-1/2 h-[700px] items-center'>
                 <div className='flex w-[550px] h-[550px] rounded-full bg-orange-100 items-center'>
                     <Image src='/hero/main.webp' alt='main' width={650} height={650} className='absolute w-[650px] h-[650px] overflow-visible' />
                 </div>

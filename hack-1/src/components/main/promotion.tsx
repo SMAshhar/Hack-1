@@ -13,7 +13,7 @@ export default function Promotion() {
                         Our Promotions Events
                     </div>
                 </div>
-                <div className='w-full flex flex-col h-[400px] xl:flex-row gap-4'>
+                <div className='w-full flex flex-col xl:flex-row gap-4'>
                     <div className='flex flex-col'>
                         <div className='flex flex-row h-1/2 w-full text-gray-900 bg-gray-200 px-8 justify-centers items-center'>
                             <div className='h-full w-1/2 flex flex-col items-center justify-center'>
@@ -36,7 +36,7 @@ export default function Promotion() {
                         </div>
                     </div>
 
-                    <div className='flex w-1/2 gap-4 mx-4'>
+                    <div className='flex w-full xl:w-1/2 gap-4 mx-4'>
                         <div className='h-full w-1/2 py-8 px-6 bg-orange-100'>
                             <div className='text-gray-800 text-sm tracking-wide'>Flex Sweetshirt</div>
                             <div className='flex items-center'>

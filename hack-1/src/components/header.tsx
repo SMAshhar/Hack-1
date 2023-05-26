@@ -14,34 +14,34 @@ export default function Header() {
 
     return (
         <div className="flex w-screen bg-white justify-center ">
-            <div className="flex w-full mx-4 xl:mx-12 px-4 py-12 xl:p-8 items-center justify-around">
+            <div className="flex w-full mx-4 lg:mx-12 px-4 py-12 lg:p-8 items-center justify-around">
                 <div className="bg-white mx-8">
                     <Image src={'/Logo.webp'} alt="logo" height={50} width={150} />
                 </div>
-                <div className='flex-grow mx-4 flex xl:hidden items-center justify-end'>
+                <div className='flex-grow mx-4 flex lg:hidden items-center justify-end'>
                     <button
-                        className="flex xl:hidden rounded-md p-2 text-gray-800 focus:outline-none duration-300 ease-in"
+                        className="flex lg:hidden rounded-md p-2 text-gray-800 focus:outline-none duration-300 ease-in"
                         onClick={toggleMenu}
                     >
                         <RiMenu3Line size={25} />
                     </button>
                 </div>
-                <div className="hidden xl:flex text-gray-800 justify-evenly gap-2 flex-grow">
+                <div className="hidden lg:flex text-gray-800 justify-evenly gap-2 flex-grow">
                     <Link href='/Female'>Female</Link>
                     <Link href='/Male'>Male</Link>
                     <Link href='/Kids'>Kids</Link>
-                    <Link href='/AllProducts'>All Products</Link>
+                    <Link href='/AllProducts' className="hidden xl:flex">All Products</Link>
                 </div>
-                <div className="hidden xl:flex text-gray-500 items-center border mx-14 border-gray-300 border-spacing-1 rounded-md flex-grow">
+                <div className="hidden lg:flex text-gray-500 items-center border mx-14 border-gray-300 border-spacing-1 rounded-md flex-grow">
                     <div className="p-1 "><CiSearch /></div><input placeholder="What you are looking for" className="px-1"></input>
                 </div>
-                <Link href='/cart' className="hidden xl:flex mx-4">
+                <Link href='/cart' className="hidden lg:flex mx-4">
                     <Cart />
                 </Link>
                 {/* Menu for Mobile */}
                 <div
-                    className={`flex flex-col mx-4 py-12 w-screen items-center justify-around xl:hidden top-0 absolute bg-white ${isMenuOpen ? "block" : "hidden"
-                        }`}
+                    className={`flex fixed flex-col mx-4 w-screen h-screen items-center justify-around lg:hidden top-0  bg-white ${isMenuOpen ? "block" : "hidden"
+                        }`} 
                 >
                     <div className="flex w-screen items-center px-8">
                         <div className="bg-white mx-8">
