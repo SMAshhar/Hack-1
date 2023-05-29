@@ -27,10 +27,10 @@ export default function Header() {
                     </button>
                 </div>
                 <div className="hidden lg:flex text-gray-800 justify-evenly gap-2 flex-grow">
-                    <Link href='/Female'>Female</Link>
-                    <Link href='/Male'>Male</Link>
-                    <Link href='/Kids'>Kids</Link>
-                    <Link href='/AllProducts' className="hidden xl:flex">All Products</Link>
+                    <Link href='/female'>Female</Link>
+                    <Link href='/male'>Male</Link>
+                    <Link href='/kids'>Kids</Link>
+                    <Link href='/allProducts' className="hidden xl:flex">All Products</Link>
                 </div>
                 <div className="hidden lg:flex text-gray-500 items-center border mx-14 border-gray-300 border-spacing-1 rounded-md flex-grow">
                     <div className="p-1 "><CiSearch /></div><input placeholder="What you are looking for" className="px-1"></input>
@@ -58,10 +58,10 @@ export default function Header() {
                     </div>
                     <div className="flex flex-col text-center pt-48 gap-3">
                         <Link href='/cart' className="flex mx-4"><Cart /></Link>
-                        <Link href='/Female' className="text-gray-800">Female</Link>
-                        <Link href='/Male' className="text-gray-800">Male</Link>
-                        <Link href='/Kids' className="text-gray-800">Kids</Link>
-                        <Link href='/AllProducts' className="text-gray-800">All Products</Link>
+                        <Link href='/female' className="text-gray-800">Female</Link>
+                        <Link href='/male' className="text-gray-800">Male</Link>
+                        <Link href='/kids' className="text-gray-800">Kids</Link>
+                        <Link href='/allProducts' className="text-gray-800">All Products</Link>
                         {/* Insert logo or other content here */}
 
                     </div>

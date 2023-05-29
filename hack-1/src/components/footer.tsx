@@ -8,7 +8,7 @@ import { BiCopyright } from 'react-icons/bi'
 
 export default function Footer() {
     return (
-        <div className='flex flex-col w-screen bg-gray-100'>
+        <div className='flex flex-col w-screen bg-white'>
             <div className='flex flex-col xl:flex-row w-full mx-16 xl:mx-28 my-8 xl:my-10 text-gray-500'>
                 <div className='w-1/4 h-full mr-16'>
                     <div className="mb-10">
