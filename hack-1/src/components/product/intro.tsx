@@ -5,6 +5,10 @@ import { useState } from 'react'
 
 export default function Intro() {
 
+    const uploadToDb = async () => {
+        await fetch('/api/updateCart')
+    }
+
     const [qty, setQty] = useState(0)
 
     return (
@@ -56,7 +60,8 @@ export default function Intro() {
                         <button className='bg-black px-8 py-2 font-bold flex items-center justify-center gap-2 text-gray-200'>
                             <CgShoppingCart className="text-2xl font-bold" />
                             Add to Cart
-                        </button>
+                        </button> 
+                        {/* add the onClick function in the above button */}
                     </div>
                     <div className='text-black ml-4 text-2xl font-semibold flex justify-center items-center'>
                         $ 525.00

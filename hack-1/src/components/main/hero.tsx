@@ -27,11 +27,11 @@ export default function Hero() {
                         <Image src={'/hero/Featured2.webp'} alt='Image' width={100} height={35} />
                         <Image src={'/hero/Featured3.webp'} alt='Image' width={100} height={35} />
                         <Image src={'/hero/Featured4.webp'} alt='Image' width={100} height={35} />
-                    </div>
+                    </div>  
                 </div>
             </div>
             <div className='hidden lg:flex w-1/2 h-[700px] items-center'>
-                <div className='flex w-[550px] h-[550px] rounded-full bg-orange-100 items-center'>
+                <div className='flex w-[550px] h-[550px] rounded-full bg-[#FFECE3] items-center'>
                     <Image src='/hero/main.webp' alt='main' width={650} height={650} className='absolute w-[650px] h-[650px] overflow-visible' />
                 </div>
             </div>
