@@ -14,7 +14,7 @@ export default function Promotion() {
                     </div>
                 </div>
                 <div className='w-full flex flex-col xl:flex-row gap-4'>
-                    <div className='flex flex-col'>
+                    <div className='flex flex-col w-1/2'>
                         <div className='flex flex-row h-1/2 w-full text-gray-900 bg-gray-200 px-8 justify-centers items-center'>
                             <div className='h-full w-1/2 flex flex-col items-center justify-center'>
                                 <div className='flex text-2xl items-start justify-center font-bold'>

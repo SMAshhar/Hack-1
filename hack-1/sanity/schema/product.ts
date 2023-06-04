@@ -9,8 +9,8 @@ export const product = {
       type: "string",
     },
     {
-      name: "jst",
-      title: "Jacket/Sweater/Trouser",
+      name: "type",
+      title: "Type",
       type: "string",
     },
     {

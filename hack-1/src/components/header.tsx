@@ -13,7 +13,7 @@ export default function Header() {
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
     return (
-        <div className="flex w-screen bg-white justify-center">
+        <div className="flex w-auto bg-white justify-center">
             <div className="flex w-full mx-4 lg:mx-12 px-4 py-12 lg:p-8 items-center justify-around">
                 <Link href={'/'} className="bg-white mx-8">
                     <Image src={'/Logo.webp'} alt="logo" height={50} width={150} />
@@ -40,10 +40,10 @@ export default function Header() {
                 </Link>
                 {/* Menu for Mobile */}
                 <div
-                    className={`flex fixed flex-col mx-4 w-screen h-screen items-center justify-around lg:hidden top-0  bg-white ${isMenuOpen ? "block" : "hidden"
+                    className={`flex fixed flex-col mx-4 w-auto h-screen items-center justify-around lg:hidden top-0  bg-white ${isMenuOpen ? "block" : "hidden"
                         }`} 
                 >
-                    <div className="flex w-screen items-center px-8">
+                    <div className="flex w-auto items-center px-8">
                         <div className="bg-white mx-8">
                             <Image src={'/Logo.webp'} alt="logo" height={100} width={150} />
                         </div>

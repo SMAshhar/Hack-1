@@ -35,6 +35,7 @@ export default function Hero() {
                     <Image src='/hero/main.webp' alt='main' width={650} height={650} className='absolute w-[650px] h-[650px] overflow-visible' />
                 </div>
             </div>
+      
         </div>
     )
 }
