@@ -1,27 +1,53 @@
-'use client'
 import React from 'react'
 import { CgShoppingCart } from 'react-icons/cg'
-import { useState } from 'react'
+import { client } from '@/lib/sanityClient'
+import { NextResponse } from 'next/server'
+import { urlFor } from '@/lib/sanityImage'
+import Counter from './counter'
+import Images1 from './images'
 
-export default function Intro() {
+async function getDataForProduct(id: string) {
+    try {
+        const res = await client.fetch(`*[_type=='product' && _id=='${id}']`)
+        console.log(id)
+        return (res)
+    } catch (error) {
+        console.log(error)
+        return NextResponse.json({ 'message': error })
+    }
+
+}
+
+export default async function Intro(id: string) {
+
+    const data = await getDataForProduct(id)
+
+    const x = data[0]?.images
 
     const uploadToDb = async () => {
         await fetch('/api/updateCart')
     }
 
-    const [qty, setQty] = useState(0)
 
     return (
-        <div className='flex w-screen bg-white px-24 py-20 gap-8'>
+        <div className='flex w-full bg-white px-24 py-20 gap-8'>
             <div>
-                <img src='/feature.webp' height={70} width={70} className='object-cover relative' />
+                {/* {data[0].images.map((item: any) => (
+                    // Images1(item)
+                    <div>
+                        <img src={urlFor(item).url()} height={70} width={70} className='object-cover relative py-2' />
+                    </div>
+                ))} */}
                 {/* SMall: Requires a Map function here */}
             </div>
-            <div>
-                <img src='/feature.webp' height={650} width={650} className='object-cover relative' />
+          <div className='h-48 w-[52rem]'>
+            <Images1 images={x}/>
+          </div>
+            {/* <div> */}
+                {/* <img src={urlFor(data[0].images[0]).url()} height={650} width={650} className='object-cover relative' /> */}
 
                 {/* Big */}
-            </div>
+            {/* </div> */}
             <div className=''>
                 {/* Dets */}
                 <div className='text-black text-3xl pt-20'>
@@ -49,10 +75,7 @@ export default function Intro() {
                         Quantity:
                     </div>
                     <div className='flex gap-1'>
-                        <button onClick={qty <= 1 ? () => setQty(1) : () => setQty(qty-1)} className='p-1 rounded-full w-10 flex justify-center items-center border-2 border-gray-300 bg-white hover:shadow-xl text-gray-700 text-lg font-bold'>-</button>
-                        <div className='text-black flex justify-center p-2'>{qty}</div>
-                        {/* Qty plus and minus ammount */}
-                        <button onClick={() => setQty(qty + 1)} className='p-1 rounded-full w-10 flex justify-center items-center border-2 border-gray-300 bg-white hover:shadow-xl text-gray-700 text-lg font-bold'>+</button>
+                        <Counter />
                     </div>
                 </div>
                 <div className='flex'>
@@ -60,7 +83,7 @@ export default function Intro() {
                         <button className='bg-black px-8 py-2 font-bold flex items-center justify-center gap-2 text-gray-200'>
                             <CgShoppingCart className="text-2xl font-bold" />
                             Add to Cart
-                        </button> 
+                        </button>
                         {/* add the onClick function in the above button */}
                     </div>
                     <div className='text-black ml-4 text-2xl font-semibold flex justify-center items-center'>
