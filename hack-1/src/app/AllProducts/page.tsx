@@ -7,8 +7,14 @@ import { urlFor } from "@/lib/sanityImage";
 import Link from "next/link";
 import { NextResponse } from "next/server";
 
-export async function getProductData() {
-    const res = await client.fetch(`*[_type=="product"]`);
+async function getProductData() {
+    const res = await client.fetch(`*[_type=="product"]{
+        title,
+        _id,
+        images,
+        type,
+        price
+    }`);
     return res
 }
 
@@ -20,7 +26,7 @@ export default async function AllProducts() {
     return (
         <div className="flex gap-16 items=center justify-around mx-14 my-8 w-full">
             <div className="text-gray-900 flex flex-wrap max-w-[150vh] gap-16 items=center relative">
-                {data?.map((item: partialProduct) => (
+                {data.map((item: partialProduct) => (
                     <Link href={`/${item._id}`} key={item._id}>
                         <ProductTiles images={urlFor(item.images[0]).url()} title={item.title} type={item.type} price={item.price} />
                     </Link>

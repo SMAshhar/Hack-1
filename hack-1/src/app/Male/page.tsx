@@ -7,7 +7,7 @@ import { urlFor } from "@/lib/sanityImage";
 import { partialProduct } from "@/lib/type";
 import Link from "next/link";
 
-export async function getMaleData() {
+async function getMaleData() {
     const res = await client.fetch(`*[_type=='product' && category._ref=='65edf871-fd97-4ab2-b721-a44038752c70']`)
     return res
 }

@@ -5,7 +5,7 @@ import { client } from "@/lib/sanityClient";
 import { partialProduct } from "@/lib/type";
 import Link from "next/link";
 
-export async function getFemaleData() {
+async function getFemaleData() {
     const res = await client.fetch(`*[_type=='product' && category._ref=='433c1d75-4d05-410d-8f1b-cab93eff7bef']`)
     return res
 }
