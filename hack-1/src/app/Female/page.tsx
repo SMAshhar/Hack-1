@@ -18,7 +18,7 @@ export default async function Female() {
         <div className="w-full m-14 justify-center items-center flex">
             <div className="flex gap-16">
                 {data.map((item: partialProduct) => (
-                    <Link href={`/${item._id}`}>
+                    <Link key={item._id} href={`/${item._id}`}>
                         <ProductTiles images={urlFor(item.images[0]).url()} title={item.title} type={item.type} price={item.price} />
                     </Link>
                 ))}

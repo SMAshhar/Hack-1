@@ -17,7 +17,7 @@ export default function Images1({ images }: any) {
                 <div className="flex ">
                     <div className="flex justify-center items-center">
                         {images.map((image: any, index: number) => (
-                            <div className={`h-[60vh] ${index==0?'w-[15rem]':'w-16'} hover:w-[30rem] overflow-hidden shadown-lg justify-center items-center transition-all duration-200`}>
+                            <div key={index} className={`h-[60vh] ${index==0?'w-[15rem]':'w-16'} hover:w-[30rem] overflow-hidden shadown-lg justify-center items-center transition-all duration-200`}>
                                 <img
                                     key={index}
                                     src={urlFor(image).url()}

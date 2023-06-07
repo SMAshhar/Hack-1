@@ -24,9 +24,9 @@ export default async function Intro(id: string) {
 
     const x = data[0]?.images
 
-    const uploadToDb = async () => {
-        await fetch('/api/updateCart')
-    }
+    // const uploadToDb = async () => {
+    //     await fetch('/api/updateCart')
+    // }
 
 
     return (

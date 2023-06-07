@@ -47,7 +47,7 @@ export default async function ProductInfo(id:string) {
                         </div>
                         <div className=' w-2/3 text-justify'>
                             {data[0].productDetails.split('.').map((feature: string) => (
-                                <div className='flex justfy-center items-center gap-1 -my-2 -mx-2 text-black font-semibold tracking-wider'><BsDot size={32} />{feature}</div>
+                                <div key={data[0]._id} className='flex justfy-center items-center gap-1 -my-2 -mx-2 text-black font-semibold tracking-wider'><BsDot size={32} />{feature}</div>
                             ))}
                         </div>
                     </div>
