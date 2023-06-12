@@ -47,7 +47,7 @@ export default function Footer() {
                     <Link href='#'>Support 24h</Link>
                 </div>
             </div>
-            <div className='flex w-full text-gray-800 border-t-2 border-gray-900'>
+            <div className='flex w-full flex-col md:flex-row text-gray-800 border-t-2 border-gray-900'>
                 <div className='flex w-1/4 py-8 mx-28'>
                     <div className='items-center'>Copyright © 2022 Dine<div>Market</div></div>
                 </div>

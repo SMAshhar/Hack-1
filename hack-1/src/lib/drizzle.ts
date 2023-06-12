@@ -1,6 +1,6 @@
 // import {pgTable, varchar, integer, serial } from "drizzle-orm/pg-core"
-// import { sql, } from "drizzle-orm";
-// import drizzle from "drizzle-orm"
+// import { sql, } from "@vercel/postgres";
+// import {drizzle } from 'drizzle-orm/vercel-postgres'
 
 
 // export const cartTable = pgTable("cart",{
@@ -8,10 +8,12 @@
 //     user_id:varchar("user_id", {
 //         length:255
 //     }).notNull(),
-//     product_id:varchar("product-id", {
+//     product_id:varchar("product_id", {
 //         length:255
 //     }).notNull(),
-//     quantity: integer("quantity").notNull()
+//     quantity: integer("quantity").notNull(),
+//     product_size:varchar("product_size", {
+//         length:255
+//     }).notNull()
 // })
-
 // export const db = drizzle(sql);

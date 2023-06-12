@@ -1,20 +1,57 @@
+'use client'
 import React from "react";
 import { BiShoppingBag } from "react-icons/bi";
 
-export default function Cart() {
+import { useSelector } from 'react-redux'
+import { RootState } from '@/store/store'
+
+import { product } from "@/lib/type";
+import CartTile from "@/components/cart/cartTile";
+import { client } from "@/lib/sanityClient";
+
+
+async function getProductData() {
+    const res = await client.fetch(`*[_type=="product"]{
+        title,
+        _id,
+        images,
+        type,
+        price
+    }`);
+    return res
+}
+
+
+export default async function Cart() {
+
+    const products = useSelector(
+        (state: RootState) => state.product
+    )
+
+    console.log('this is products: ', products, products.length)
+
+    const productsFromSanity = await getProductData()
+
     return (
-        <div className="w-full bg-white">
-            <div className=" text-gray-900 text-2xl font-bold justify-start px-40 py-16 items-center flex">
-                Shopping Cart
-            </div>
-            <div className="flex w-full justify-center items-center flex-col pt-8 pb-28">
-                <div className="flex text-gray-900 text-9xl font-bold justify-start p-4 items-center ">
-                    <BiShoppingBag />
+        <div className="text-black mx-20 flex flex-col w-2/3 my-8">
+            {products?.map((item: any) => (
+                <div key={item._id}>
+                    {productsFromSanity.map((data: product) => (
+                        <div key={data._id}>
+                            {item.product == data._id ?
+                                <div>
+                                    {CartTile(data, item.quantity, item.size)}
+                                </div>
+                                :
+                                <div>
+                                </div>
+                            }
+                        </div>
+                    ))}
                 </div>
-                <div className=" text-gray-900 tracking-widest text-3xl font-bold justify-start items-center flex">
-                    Your shopping bag is empty
-                </div>
-            </div>
+            ))}
         </div>
     )
 }
+
+// }

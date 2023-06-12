@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { CgShoppingCart } from 'react-icons/cg'
+import Link from 'next/link'
 
 export default function Hero() {
     return (
@@ -17,10 +18,10 @@ export default function Hero() {
                     Anyone can beat you but no one can beat your outfit as long as you wear Dine outfits.
                     </div>
                     <div>
-                        <button className='bg-black p-4 mx-14 flex items-center justify-center gap-2 text-gray-200'>
+                        <Link href='/allProduct' className='bg-black p-4 mx-14 flex items-center justify-center gap-2 text-gray-200'>
                             <CgShoppingCart className= "text-2xl" />
                             Start Shopping
-                        </button>
+                        </Link>
                     </div>
                     <div className='flex my-20 ml-8 w-full justify-around'>
                         <Image src={'/hero/Featured1.webp'} alt='Image' width={100} height={35} />

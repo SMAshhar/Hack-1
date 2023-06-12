@@ -2,7 +2,7 @@ export type product = {
     images:string,
     title:string,
     type:string,
-    price:string,
+    price:number,
     _id?:string,
     description?:string,
     productDetails?:string,

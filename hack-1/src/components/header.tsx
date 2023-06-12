@@ -2,13 +2,18 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+
+
 import { CiSearch } from 'react-icons/ci'
 import { RiMenu3Line } from 'react-icons/ri'
-import Cart from "./cart";
+import Cart from "./cartIcon";
 import { useState } from 'react'
 import { IoMdClose } from 'react-icons/io'
 
+
+
 export default function Header() {
+
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -36,6 +41,7 @@ export default function Header() {
                     <div className="p-1 "><CiSearch /></div><input placeholder="What you are looking for" className="px-1"></input>
                 </div>
                 <Link href='/cart' className="hidden lg:flex mx-4">
+
                     <Cart />
                 </Link>
                 {/* Menu for Mobile */}
@@ -43,7 +49,7 @@ export default function Header() {
                     className={`flex fixed flex-col mx-4 w-auto h-screen items-center justify-around lg:hidden top-0  bg-white ${isMenuOpen ? "block" : "hidden"
                         }`} 
                 >
-                    <div className="flex w-auto items-center px-8">
+                    <div className="flex items-center bg-white w-screen px-8 z-50">
                         <div className="bg-white mx-8">
                             <Image src={'/Logo.webp'} alt="logo" height={100} width={150} />
                         </div>
@@ -57,11 +63,11 @@ export default function Header() {
                         </div>
                     </div>
                     <div className="flex flex-col text-center pt-48 gap-3">
-                        <Link href='/cart' className="flex mx-4"><Cart /></Link>
-                        <Link href='/female' className="text-gray-800">Female</Link>
-                        <Link href='/male' className="text-gray-800">Male</Link>
-                        <Link href='/kids' className="text-gray-800">Kids</Link>
-                        <Link href='/allProducts' className="text-gray-800">All Products</Link>
+                        <Link onClick={toggleMenu} href='/cart' className="flex mx-4"><Cart /></Link>
+                        <Link onClick={toggleMenu} href='/female' className="text-gray-800">Female</Link>
+                        <Link onClick={toggleMenu} href='/male' className="text-gray-800">Male</Link>
+                        <Link onClick={toggleMenu} href='/kids' className="text-gray-800">Kids</Link>
+                        <Link onClick={toggleMenu} href='/allProducts' className="text-gray-800">All Products</Link>
                         {/* Insert logo or other content here */}
 
                     </div>
