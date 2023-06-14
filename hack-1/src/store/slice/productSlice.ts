@@ -34,6 +34,14 @@ export const productSlice = createSlice({
       state.push(newProduct)
     },
 
+    deleteProduct: (state, actions:PayloadAction<any>) => {
+      for (let i=0; i<=state.length; i++) {
+        if (state[i] == actions.payload) {
+          state.splice(state.indexOf(actions.payload), 1)
+        }
+      }
+    },
+
     clearCart: (state) => {
       state = initialState;
     },

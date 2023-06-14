@@ -28,11 +28,11 @@ export default async function Intro(id: string) {
             <div className=''>
                 {/* Dets */}
                 <div className='text-black text-3xl pt-20'>
-                    <h1>Imperial Alpaca Hoodie</h1>
+                    <h1>{data[0].title}</h1>
                     {/* Heading */}
                 </div>
                 <div className='text-gray-400 text-2xl py-2'>
-                    <h1>Jackets</h1>
+                    <h1>{data[0].type}</h1>
                     {/* Category */}
                 </div>
                 <div className='mt-4 my-2 text-black font-bold'>
